@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+section {
+    padding-top: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+header {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.719);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+
+header nav {
+    display: flex;
+    justify-content: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #5900ff;
+}
+
+.banner {
+    position: relative;
+    background-image: url('imgbanner.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.banner button {
+    background-color: #5900ff;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.banner button:hover {
+    background-color: #d400ff;
+}
+
+.sobre-nosotros {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.13);
+    animation: fadeIn 1s ease;
+}
+
+.sobre-nosotros h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.sobre-nosotros p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 2px solid #5900ff;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 500px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease;
+}
+
+
+.tarjeta:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.tarjeta h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.tarjeta ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #666;
+}
+
+.tarjeta ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.tarjeta ul li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: #007BFF;
+}
+
+.tarjeta p {
+    color: #777;
+}
+
+.tarjeta button {
+    background-color: #5900ff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.tarjeta button:hover {
+    background-color: #d400ff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #5900ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-form button:hover {
+    background-color: #d400ff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
