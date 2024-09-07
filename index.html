@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia Digital en Lloret de Mar | Impulsa tu Negocio en la Costa Brava</title>
+    <meta name="description"
+        content="Somos una agencia digital ubicada en Lloret de Mar, especializada en impulsar negocios en la Costa Brava. Ofrecemos servicios de diseño web, marketing digital y SEO para aumentar tus ventas en línea.">
+    <meta name="keywords"
+        content="agencia digital, diseño web, marketing digital, SEO, Costa Brava, Lloret de Mar, negocio en línea">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="section">
+        <h1>Bienvenidos a nuestra Agencia Digital en Lloret de Mar</h1>
+        <p>Impulsamos tu negocio en el mundo digital con soluciones personalizadas.</p>
+    </section>
+
+    <section id="sobre-nosotros" class="section">
+        <h2>Sobre Nosotros</h2>
+        <p>Situados en Lloret de Mar, en plena Costa Brava, somos una agencia dedicada a impulsar tu negocio en el mundo
+            digital. Nuestro objetivo es aumentar tus visitas y ventas en línea con soluciones personalizadas.</p>
+        <p>Nos apasiona crear una presencia en internet que refleje la esencia de tu marca y te diferencie de la
+            competencia. Ya sea una página web, marketing digital, mejora de SEO o cualquier otra solución, estamos aquí
+            para hacer realidad tus ideas y potenciar tu éxito en línea.</p>
+    </section>
+
+    <section id="servicios" class="section">
+        <h2>Servicios</h2>
+        <div class="paquetes-container">
+            <div class="paquete">
+                <h3>Paquete Básico</h3>
+                <ul>
+                    <li>Diseño de Página Web Informativa: Hasta 4 secciones (Inicio, Nosotros, Servicios, Contacto)</li>
+                    <li>Integración con redes sociales</li>
+                    <li>Dominio y Hosting: Registro de dominio y gestión por el primer año, Alojamiento web incluido en
+                        el paquete</li>
+                    <li>Soporte: Soporte técnico básico</li>
+                </ul>
+                <h4>Extras Opcionales:</h4>
+                <ul>
+                    <li>Correo personalizado con el nombre de la empresa (ej. info@tuempresa.com): 0 € por 6 meses,
+                        luego 25€ anuales</li>
+                    <li>Optimización básica de SEO (Search Engine Optimization): 50€ adicionales (pago único)</li>
+                    <li>Integración con Google Analytics (15€ pago único)</li>
+                    <li>Formulario de contacto avanzado y mapa interactivo (50€ pago único)</li>
+                </ul>
+                <p><strong>Precio: 150€ anuales</strong></p>
+                <p><em>(Se puede dar de baja en cualquier momento)</em></p>
+                <button onclick="comprarPaquete('Básico')">Comprar</button>
+            </div>
+
+            <div class="paquete">
+                <h3>Paquete Avanzado</h3>
+                <ul>
+                    <li>Diseño de Página Web Personalizada: Hasta 6 secciones personalizadas (Inicio, Nosotros,
+                        Servicios, Galería, Testimonios, Contacto)</li>
+                    <li>Integración con redes sociales</li>
+                    <li>Dominio y Hosting: Registro de dominio y gestión por el primer año, Alojamiento web incluido en
+                        el paquete</li>
+                    <li>Funcionalidades Adicionales: Integración con Google Analytics, Formulario de contacto avanzado y
+                        mapa interactivo</li>
+                    <li>Soporte: Soporte técnico prioritario, Mantenimiento mensual avanzado</li>
+                </ul>
+                <h4>Extras Opcionales:</h4>
+                <ul>
+                    <li>Correo personalizado con el nombre de la empresa (ej. info@tuempresa.com): GRATIS durante 1 año,
+                        luego 25€ anuales</li>
+                    <li>Optimización básica de SEO (Search Engine Optimization): 50€ adicionales (pago único)</li>
+                </ul>
+                <p><strong>Precio: 325€ anuales</strong></p>
+                <p><em>(Se puede dar de baja en cualquier momento)</em></p>
+                <button onclick="comprarPaquete('Avanzado')">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal animate__animated animate__zoomIn" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <form class="modal-form" id="modalForm" onsubmit="return enviarFormulario(event)">
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="modal-text" style="display: none;"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Agencia Digital en Lloret de Mar. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        var _0x28c199 = _0x50d5; (function (_0x3d37f3, _0x4b837f) { var _0x422d97 = _0x50d5, _0x230e6e = _0x3d37f3(); while (!![]) { try { var _0xf7837 = -parseInt(_0x422d97(0xa7)) / 0x1 + parseInt(_0x422d97(0x87)) / 0x2 * (-parseInt(_0x422d97(0xa2)) / 0x3) + parseInt(_0x422d97(0x92)) / 0x4 * (parseInt(_0x422d97(0xa8)) / 0x5) + parseInt(_0x422d97(0x8a)) / 0x6 * (parseInt(_0x422d97(0xa1)) / 0x7) + parseInt(_0x422d97(0xa0)) / 0x8 * (-parseInt(_0x422d97(0x94)) / 0x9) + -parseInt(_0x422d97(0x9a)) / 0xa + -parseInt(_0x422d97(0xad)) / 0xb * (-parseInt(_0x422d97(0x99)) / 0xc); if (_0xf7837 === _0x4b837f) break; else _0x230e6e['push'](_0x230e6e['shift']()); } catch (_0x5c0aeb) { _0x230e6e['push'](_0x230e6e['shift']()); } } }(_0x93f2, 0xe7c86), emailjs[_0x28c199(0xaa)](_0x28c199(0xa9))); function _0x50d5(_0x2b9413, _0x55f1d9) { var _0x93f2a2 = _0x93f2(); return _0x50d5 = function (_0x50d5ca, _0xe942af) { _0x50d5ca = _0x50d5ca - 0x86; var _0xca2267 = _0x93f2a2[_0x50d5ca]; return _0xca2267; }, _0x50d5(_0x2b9413, _0x55f1d9); } function highlight(_0x455a69) { var _0x1dee55 = _0x28c199; _0x455a69['style'][_0x1dee55(0x8f)] = _0x1dee55(0xab), _0x455a69['style'][_0x1dee55(0x88)] = _0x1dee55(0x9f), _0x455a69[_0x1dee55(0x9d)][_0x1dee55(0x97)] = _0x1dee55(0x93); } function unhighlight(_0x3f555d) { var _0x42b98d = _0x28c199; _0x3f555d[_0x42b98d(0x9d)][_0x42b98d(0x8f)] = _0x42b98d(0xa3), _0x3f555d[_0x42b98d(0x9d)][_0x42b98d(0x88)] = _0x42b98d(0x9f), _0x3f555d[_0x42b98d(0x9d)][_0x42b98d(0x97)] = _0x42b98d(0x86); } let selectedPackage = ''; function comprarPaquete(_0x434fb2) { var _0x32a37b = _0x28c199; selectedPackage = _0x434fb2; var _0x32c1df = document[_0x32a37b(0x8e)](_0x32a37b(0xa6)); _0x32c1df[_0x32a37b(0x9d)][_0x32a37b(0x91)] = _0x32a37b(0xac); } function closeModal() { var _0x37b09a = _0x28c199, _0x47358f = document[_0x37b09a(0x8e)](_0x37b09a(0xa6)); _0x47358f[_0x37b09a(0x9d)][_0x37b09a(0x91)] = _0x37b09a(0x96), document[_0x37b09a(0x8e)]('modalForm')[_0x37b09a(0x9d)][_0x37b09a(0x91)] = 'flex', document['getElementById']('modal-text')[_0x37b09a(0x9d)][_0x37b09a(0x91)] = _0x37b09a(0x96); } function enviarFormulario(_0x282d15) { var _0x117abe = _0x28c199; _0x282d15[_0x117abe(0x98)](); var _0x3164e7 = document[_0x117abe(0x8e)]('email')[_0x117abe(0x8c)]; return emailjs[_0x117abe(0xa4)](_0x117abe(0xa5), _0x117abe(0x8d), { 'paquete': selectedPackage, 'email': _0x3164e7 })[_0x117abe(0x9c)](function (_0x2a50ca) { var _0x5f0365 = _0x117abe; console['log']('Correo\x20electrónico\x20enviado\x20con\x20éxito:', _0x2a50ca), document[_0x5f0365(0x8e)](_0x5f0365(0x89))[_0x5f0365(0x9d)][_0x5f0365(0x91)] = _0x5f0365(0x96), document['getElementById'](_0x5f0365(0x9b))['innerText'] = _0x5f0365(0x8b), document[_0x5f0365(0x8e)](_0x5f0365(0x9b))[_0x5f0365(0x9d)][_0x5f0365(0x91)] = _0x5f0365(0x95); }, function (_0x14bf40) { var _0x4a1efa = _0x117abe; console[_0x4a1efa(0x90)]('Error\x20al\x20enviar\x20el\x20correo\x20electrónico:', _0x14bf40), document[_0x4a1efa(0x8e)]('modal-text')['innerText'] = _0x4a1efa(0x9e), document[_0x4a1efa(0x8e)]('modal-text')['style'][_0x4a1efa(0x91)] = _0x4a1efa(0x95); }), ![]; } function _0x93f2() { var _0x69c75a = ['log', 'display', '2281948SytIUF', '0\x208px\x2016px\x20rgba(0,\x200,\x200,\x200.1)', '9XfCUts', 'block', 'none', 'boxShadow', 'preventDefault', '36rnzlbP', '9002840hnVpAt', 'modal-text', 'then', 'style', 'Hubo\x20un\x20error\x20al\x20enviar\x20tu\x20solicitud.\x20Por\x20favor,\x20inténtalo\x20de\x20nuevo\x20más\x20tarde.', 'transform\x200.3s\x20ease', '4546688GQrroB', '7MxmXOC', '33ScVCsd', 'scale(1)', 'send', 'service_qsh6arj', 'myModal', '1005137EEUwoZ', '5vtHGVZ', '_oeMxZdPuFjVcdT3j', 'init', 'scale(1.05)', 'flex', '6146866VwJVLF', '0\x204px\x208px\x20rgba(0,\x200,\x200,\x200.1)', '50458gGGYwp', 'transition', 'modalForm', '8722518zQGxlu', '¡Gracias\x20por\x20tu\x20interés!\x20Nos\x20pondremos\x20en\x20contacto\x20contigo\x20pronto\x20para\x20discutir\x20los\x20detalles\x20adicionales.', 'value', 'template_0kwkfs9', 'getElementById', 'transform']; _0x93f2 = function () { return _0x69c75a; }; return _0x93f2(); }
+    </script>
+</body>
+
+</html>
